@@ -9,7 +9,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "> ";
-		std::getline(std::cin, line);
+		if (!std::getline(std::cin, line))
+			break;
 		if (line == "ADD")
 			book.add();
 		else if (line == "SEARCH")

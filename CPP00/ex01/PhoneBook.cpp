@@ -36,7 +36,8 @@ void	PhoneBook::search(void)
 			this->contacts[i].print();
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "$ index of the entry to display: ";
-	std::getline(std::cin, str);
+	if (!std::getline(std::cin, str))
+		return;
 	for (size_t i = 0; i < str.length(); i++)
 	{
 		if (!isdigit(str[i]))

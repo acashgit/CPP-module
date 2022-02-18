@@ -23,7 +23,8 @@ bool	Contact::set(int index)
 	for (size_t i = 0; i < 5; i++)
 	{
 		std::cout << "$ " << Contact::names[i] << ": ";
-		std::getline(std::cin, this->filed[i]);
+		if (!std::getline(std::cin, this->filed[i]))
+			return (false);
 	}
 	for (size_t i = 0; i < 5; i++)
 	{
