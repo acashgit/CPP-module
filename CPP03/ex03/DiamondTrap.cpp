@@ -2,8 +2,8 @@
 
 DiamondTrap::DiamondTrap(std::string names) : ClapTrap(names + "_clap_name"), ScavTrap(names), FragTrap(names)
 {
-	std::cout << "DiamondTrap " << this->name << " is here" << std::endl;
 	this->name = names;
+	std::cout << "DiamondTrap " << this->name << " is here" << std::endl;
 	this->hit_points  = FragTrap::hit_points;
 	this->en_points = ScavTrap::en_points;
 	this->damage = FragTrap::damage;
