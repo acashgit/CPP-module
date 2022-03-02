@@ -78,11 +78,3 @@ std::ostream &operator<<(std::ostream &out, Span const &span)
 		out << *item << " ";
 	return (out);
 }
-
-template<typename T>
-void	Span::addNumber(T begin, T end) 
-{
-	if (this->storage.size() + std::distance(begin, end) > this->len)
-		throw Span::StorageFullException();
-	this->storage.insert(begin, end);
-}
